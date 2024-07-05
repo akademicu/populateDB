@@ -44,7 +44,7 @@ public class ArtistServiceImpl implements ArtistService {
             artist.setEmail((String) user.get("email"));
             String password = hashPassword(login.get("password"));
             artist.setPassword(password);
-            artist.setUrl(picture.get("thumbnail"));
+            artist.setUrl(picture.get("large"));
 
             artistRepository.save(artist);
         }
